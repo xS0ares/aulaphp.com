@@ -54,6 +54,13 @@ $ptT =$ptV+$ptE+$ptD;
 echo "A quantidade total de jogos foi: $quantJogos<br> A quantidade de pontos disputados foi:$ptT<br> A quantidade de pontos ganhos:$ptV  <br> A quantidade de pontos perdidos:$ptE ";
 echo "<hr>";
 $salario7 = $_POST["salario7"];
-$masculino7 =($salario7) * 0,05;
-$feminino7 =($salario7) * 0,03;
-if 
+$sexo = $_POST["sexo"];
+if ($sexo == "Masculino7") {
+    $desconto7 = $salario7 * 0.05;
+    $SalarioLiquido = $salario7 - $desconto7;
+    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido;"; 
+} else {
+    $desconto7 = $salario7 * 0.03;
+    $SalarioLiquido = $salario7 - $desconto7;
+    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido;"; 
+}
