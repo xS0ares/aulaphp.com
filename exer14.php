@@ -58,9 +58,10 @@ $sexo = $_POST["sexo"];
 if ($sexo == "Masculino7") {
     $desconto7 = $salario7 * 0.05;
     $SalarioLiquido = $salario7 - $desconto7;
-    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido;"; 
+    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido."; 
 } else {
     $desconto7 = $salario7 * 0.03;
     $SalarioLiquido = $salario7 - $desconto7;
-    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido;"; 
+    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido."; 
 }
+s
