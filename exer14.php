@@ -58,17 +58,27 @@ $sexo = $_POST["sexo"];
 if ($sexo == "Masculino7") {
     $desconto7 = $salario7 * 0.05;
     $SalarioLiquido = $salario7 - $desconto7;
-    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido."; 
+    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido.<br>"; 
 } else {
     $desconto7 = $salario7 * 0.03;
     $SalarioLiquido = $salario7 - $desconto7;
-    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido."; 
+    echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido.<br>"; 
 };
+echo "<hr>";
 $num8 = $_POST["num8"];
 if ($num8 >0) {
-    echo "O número $num8 é Positivo.";
+    echo "O número $num8 é Positivo.<br>";
 } elseif ($num8 <0) {
-    echo "O número $num8 é Negativo.";
+    echo "O número $num8 é Negativo.<br>";
 } else {
-    echo "O número $num8 é Nulo.";
+    echo "O número $num8 é Nulo.<br>";
+};
+echo "<hr>";
+$disciplina = $_POST["disciplina"];
+if ($disciplina == 0) {
+    echo "Aprovado! Aproveite as férias !!";
+} elseif ($disciplina <=1 or $disciplina <=3 ) {
+    echo "Recuperação! Terá que estudar mais!";
+} else {
+    echo "Reprovado! Bons estudos no próximo ano!";
 }
