@@ -81,4 +81,15 @@ if ($disciplina == 0) {
     echo "Recuperação! Terá que estudar mais!";
 } else {
     echo "Reprovado! Bons estudos no próximo ano!";
-}
+};
+echo "<hr>";
+$data = $_POST["data"];
+$genero = $_POST["genero"];
+$dataHoje = date("d-m-Y");
+$idade = $dataHoje - $data;
+if ($genero =="masculino10") {
+    echo "Serviço Militar obrigatório.<br>";
+} else {
+    echo "Isento de  Serviço Militar.<br>";
+};
+echo date("d/m/Y");
