@@ -64,4 +64,3 @@ if ($sexo == "Masculino7") {
     $SalarioLiquido = $salario7 - $desconto7;
     echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido."; 
 }
-s
