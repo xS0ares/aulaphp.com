@@ -63,4 +63,12 @@ if ($sexo == "Masculino7") {
     $desconto7 = $salario7 * 0.03;
     $SalarioLiquido = $salario7 - $desconto7;
     echo "Com desconto de 5%, o salário liquido de um funcionário em questão é: $SalarioLiquido."; 
+};
+$num8 = $_POST["num8"];
+if ($num8 >0) {
+    echo "O número $num8 é Positivo.";
+} elseif ($num8 <0) {
+    echo "O número $num8 é Negativo.";
+} else {
+    echo "O número $num8 é Nulo.";
 }
