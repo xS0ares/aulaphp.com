@@ -84,12 +84,11 @@ if ($disciplina == 0) {
 };
 echo "<hr>";
 $data = $_POST["data"];
-$genero = $_POST["genero"];
-$dataHoje = date("d-m-Y");
-$idade = $dataHoje - $data;
-if ($genero =="masculino10") {
+$date = new DateTime($data );
+$interval = $date->diff( new DateTime( date('d-m-Y') ) );
+echo $interval->format( '%Y anos' );
+if ($interval == 18 and $genero =="masculino10") {
     echo "Serviço Militar obrigatório.<br>";
 } else {
     echo "Isento de  Serviço Militar.<br>";
 };
-echo date("d/m/Y");
