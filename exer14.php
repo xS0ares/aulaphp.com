@@ -83,12 +83,15 @@ if ($disciplina == 0) {
     echo "Reprovado! Bons estudos no próximo ano!";
 };
 echo "<hr>";
+$genero = $_POST["genero"];
 $data = $_POST["data"];
-$date = new DateTime($data);
-$interval = $date->diff(new DateTime(date('d-m-Y')));
-echo $interval->format('%Y anos');
-if ($interval == 18) {
-    echo "Serviço Militar obrigatório.<br>";
-} else {
-    echo "Isento de  Serviço Militar.<br>";
+list($ano, $mes, $dia) = explode('-', $data);
+$hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+$nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+$idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+if($genero == "masculino10" && $idade >=18){
+echo"Você precisa se alistar obrigatóriamente<br> OBS:caso não tenha se alistado ainda";
+}
+else {
+echo"Você não precisa se alistar ";
 };
